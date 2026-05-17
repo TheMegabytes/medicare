@@ -1,5 +1,10 @@
+// Components
+
 import Navbar from "./components/Navbar";
-import Hero from "./pages/Hero";
+
+// Pages
+import Hero from "./pages/landing/Hero.jsx";
+
 
 const App = () => {
   return (

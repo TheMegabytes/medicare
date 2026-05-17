@@ -4,9 +4,13 @@ import {
   DatabaseBackupIcon,
   PlayCircle,
   ShieldCheck,
-  UserLockIcon,
+  Users,
 } from "lucide-react";
+
 import { Link } from "react-router";
+
+// local imports
+import dashboard from "../assets/dashboard.png";
 
 const Hero = () => {
   return (
@@ -33,21 +37,27 @@ const Hero = () => {
             Chaos
           </span>
         </h2>
+
         <p>
           Manage patients, appointments, billing, prescriptions and reports in
           one secure, modern platform built for real hospital workflows.
         </p>
+
         <div className="flex justify-between items-center max-w-80 space-x-4">
           <Link
             className="flex justify-center items-center px-4 py-2 bg-primary-500
-            text-white rounded-lg"
+            text-white  hover:bg-primary-600 overflow-hidden
+            hover:shadow-primary-600 border border-primary-300 rounded-lg  
+            font-semibold hover:shadow-[0_0_10px_rgba(0,0,200,0.6)] transition-all 
+            duration-300 hover:cursor-pointer"
             to="/signup"
           >
             Get Started <ArrowRight className="ml-2" size={18} />
           </Link>
           <Link
-            className="flex justify-center items-center border-2 border-border
-          rounded-lg px-4 py-2"
+            className="flex justify-center items-center rounded-lg px-4 py-2 border 
+            border-primary-300 font-semibold hover:shadow-[0_0_10px_rgba(0,0,200,0.6)] 
+            transition-all duration-300 hover:cursor-pointer"
             to="/demo"
           >
             <PlayCircle className="mr-2" size={18} />
@@ -57,24 +67,53 @@ const Hero = () => {
 
         <div className="flex justify-between items-center mt-12 space-x-3">
           <div className="flex flex-col justify-center items-center gap-3">
-            <ShieldCheck className="rounded shadow-xl" />
+            <div
+              className="p-1 rounded shadow-[0_0_5px_rgba(0,0,0,0.4)] 
+            text-primary-400"
+            >
+              <ShieldCheck />
+            </div>
             <p className="text-center text-sm">HIPAA Ready Security</p>
           </div>
+
           <div className="flex flex-col justify-center items-center gap-3">
-            <Clock />
+            <div
+              className="p-1 rounded shadow-[0_0_5px_rgba(0,0,0,0.4)] 
+            text-primary-400"
+            >
+              <Clock />
+            </div>
             <p className="text-center text-sm">99.99% Uptime</p>
           </div>
+
           <div className="flex flex-col justify-center items-center gap-3">
-            <DatabaseBackupIcon />
+            <div
+              className="p-1 rounded shadow-[0_0_5px_rgba(0,0,0,0.4)] 
+            text-primary-400"
+            >
+              <DatabaseBackupIcon />
+            </div>
             <p className="text-center text-sm">Cloud Backup</p>
           </div>
+
           <div className="flex flex-col justify-center items-center gap-3">
-            <UserLockIcon />
+            <div
+              className="p-1 rounded shadow-[0_0_5px_rgba(0,0,0,0.4)] 
+            text-primary-400"
+            >
+              <Users />
+            </div>
             <p className="text-center text-sm">Role Based Access</p>
           </div>
         </div>
       </div>
-      <div></div>
+
+      <img
+        src={dashboard}
+        alt="Dashboard"
+        className="w-200 rounded-lg absolute bottom-2.5 right-0 perspective-distant
+        rotate-x-8 -rotate-y-18 rotate-z-2 shadow-[0_5px_15px_#3b82f6]"
+      />
     </div>
   );
 };
