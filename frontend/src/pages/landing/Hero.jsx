@@ -10,7 +10,7 @@ import {
 import { Link } from "react-router";
 
 // local imports
-import dashboard from "../assets/dashboard.png";
+import dashboard from "../../assets/dashboard.png";
 
 const Hero = () => {
   return (
