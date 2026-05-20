@@ -72,3 +72,10 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+.login {
+  background-image: url(./assets/hospital.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
