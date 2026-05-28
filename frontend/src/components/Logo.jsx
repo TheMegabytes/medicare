@@ -1,7 +1,6 @@
 const Logo = () => {
   return (
-    <div className="flex justify-center items-center space-x-3 sm:space-x-5">
-      <div className="text-2xl">+</div>
+    <div className="flex items-center space-x-3 sm:space-x-5">
       <div>
         <h3 className="text-normal sm:text-2xl font-mono font-extrabold">
           Medi

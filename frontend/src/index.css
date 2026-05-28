@@ -79,3 +79,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.signup {
+  background-image: url(./assets/FemaleDoc.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { Lock, Mail, ShieldCheck } from "lucide-react";
+import Logo from "../../components/Logo";
 
 const Login = () => {
   return (
@@ -15,15 +16,7 @@ const Login = () => {
           className="hidden sm:flex flex-col max-w-85 p-6 rounded-l-xl 
         bg-primary-600"
         >
-          <div className="flex justify-start items-center space-x-3 sm:space-x-5">
-            <div className="text-2xl">+</div>
-            <div>
-              <h3 className="text-normal sm:text-2xl font-mono font-extrabold">
-                MediCare
-              </h3>
-              <p className="text-[10px] tracking-tight">HOSPITAL MANAGEMENT</p>
-            </div>
-          </div>
+          <Logo />
 
           <div className="flex flex-col gap-0.5 mt-3 text-xl font-bold">
             <span>Smart Hospital</span>
