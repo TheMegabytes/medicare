@@ -14,15 +14,9 @@ import dashboard from "../../assets/dashboard.png";
 
 const Hero = () => {
   return (
-    <div
-      className="min-h-screen bg-linear-to-bl from-primary-100 to-bg-app flex
-     justify-between items-center px-12"
-    >
+    <div className="min-h-screen flex justify-between items-center px-12">
       <div className="max-w-md space-y-5">
-        <div
-          className="max-w-50 text-success-400 p-1 rounded-full bg-success-100
-        mb-6"
-        >
+        <div className="max-w-50 text-success-400 p-1 rounded-full bg-success-100 mb-6">
           <div className="flex justify-center items-center space-x-2">
             <ShieldCheck size={18} />
             <p className="text-xs">Trusted by 500+ Hospitals</p>
@@ -30,10 +24,7 @@ const Hero = () => {
         </div>
         <h2 className="max-w-100 text-4xl font-semibold">
           Run Your Hospital Without{" "}
-          <span
-            className="bg-linear-to-r from-primary-600 to-accent-600 bg-clip-text
-          text-transparent"
-          >
+          <span className="bg-linear-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
             Chaos
           </span>
         </h2>
@@ -45,11 +36,7 @@ const Hero = () => {
 
         <div className="flex justify-between items-center max-w-80 space-x-4">
           <Link
-            className="flex justify-center items-center px-4 py-2 bg-primary-500
-            text-white  hover:bg-primary-600 overflow-hidden
-            hover:shadow-primary-600 border border-primary-300 rounded-lg  
-            font-semibold hover:shadow-[0_0_10px_rgba(0,0,200,0.6)] transition-all 
-            duration-300 hover:cursor-pointer"
+            className="flex justify-center items-center px-4 py-2 bg-primary-500 text-white  hover:bg-primary-600 overflow-hidden hover:shadow-primary-600 border border-primary-300 rounded-lg font-semibold hover:shadow-[0_0_10px_rgba(0,0,200,0.6)] transition-all duration-300 hover:cursor-pointer"
             to="/signup"
           >
             Get Started <ArrowRight className="ml-2" size={18} />

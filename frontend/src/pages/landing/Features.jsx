@@ -6,7 +6,7 @@ import { features } from "../../constants/features.jsx";
 const Features = () => {
   return (
     <div
-      className="min-h-screen flex flex-col justify-center items-center p-4 sm:p-4 
+      className="min-h-screen flex flex-col justify-center items-center p-4 
     md:p-6 gap-6"
     >
       <div className="max-w-200 mb-2.5 text-center mt-20">
@@ -27,13 +27,10 @@ const Features = () => {
           return (
             <div
               key={index}
-              className="max-w-95 p-3 rounded-lg shadow-[0_0_5px_rgba(0,0,0,0.4)]"
+              className="max-w-95 p-3 rounded-lg shadow-[0_0_5px_rgba(0,0,0,0.4)] bg-bg-app"
             >
               <div className="w-full">
-                <h4
-                  className="flex items-center gap-2 sm:gap-3 text-text-heading 
-                  font-semibold md:text-2xl"
-                >
+                <h4 className="flex items-center gap-2 sm:gap-3 text-text-heading font-semibold md:text-2xl">
                   {
                     <card.icon
                       size={30}

@@ -11,7 +11,7 @@ import Pricing from "./pages/landing/Pricing.jsx";
 
 const App = () => {
   return (
-    <div className="bg-linear-to-bl from-primary-200 to-bg-app text-text-body">
+    <div className="bg-linear-to-bl from-primary-100 to-bg-app text-text-body">
       <Navbar />
       {/* <Hero /> */}
       {/* <Features /> */}

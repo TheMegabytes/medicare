@@ -9,7 +9,8 @@ import {
 } from "lucide-react";
 import { Link } from "react-router";
 
-import prices from "../../constants/prices.js"; // Constants
+import prices from "../../constants/prices.jsx"; // Constants
+import plans from "../../constants/plans.jsx";
 
 const Pricing = () => {
   return (
@@ -60,15 +61,15 @@ const Pricing = () => {
         </div>
 
         <div
-          className="flex justify-around items-center max-w-[80%] p-2 mb-3 
-        mt-12 mx-auto"
+          className="flex justify-around items-center max-w-[60%] p-2 mb-3 
+        mt-12 mx-auto shadow-custom rounded-full"
         >
           <span className="text-sm font-semibold">Monthly</span>
           <div>Switch here</div>
           <span className="text-sm font-semibold">Yearly</span>
           <span
-            className="px-2 py-1 rounded-full text-success-500/80 
-          bg-success-500/10 text-sm"
+            className="px-2 py-1 rounded-full text-success-600
+          bg-success-200 text-sm"
           >
             Save 20%
           </span>
@@ -82,20 +83,21 @@ const Pricing = () => {
         {prices.map((price, index) => (
           <div
             key={index}
-            className={`w-80 h-110 rounded-xl p-2 relative ${
+            className={`w-80 h-110 rounded-xl bg-app p-2 relative ${
               price.title === "Professional"
                 ? "shadow-[0_0_5px_#3b82f6] border border-primary-600"
                 : "shadow-[0_0_5px_rgba(0,0,0,0.4)]"
             }`}
           >
-            <div className={`px-2 py-1 bg-primary-600 absolute -top-3 left-25 items-center gap-2 text-xs 
-              text-white ${price.title === 'Professional'  ? 'flex' : 'hidden'} rounded`}>
+            <div
+              className={`px-2 py-1 bg-primary-600 absolute -top-3 left-25 items-center gap-2 text-xs 
+                text-white rounded ${price.title === "Professional" ? "flex" : "hidden"}`}
+            >
               <Star className="size-4" /> Most popular
             </div>
             <div className="flex justify-start items-center gap-5 mt-3 sm:text-lg">
               <div
-                className={`w-13.5 h-13.5 flex justify-center items-center rounded-full ${price.colors.text}
-                ${price.colors.bg}/20`}
+                className={`w-13.5 h-13.5 flex justify-center items-center rounded-full ${price.colors.text} ${price.colors.bg}/20`}
               >
                 <price.icon className="size-10 flex justify-center items-center" />
               </div>
@@ -139,19 +141,29 @@ const Pricing = () => {
             hover:cursor-pointer absolute bottom-5 left-20`}
               to="/signup"
             >
-              {price.title === 'Enterprise' ? 'Talk To Sales' : 'Get Started'} <ArrowRight className="ml-2" size={18} />
+              {price.title === "Enterprise" ? "Talk To Sales" : "Get Started"}{" "}
+              <ArrowRight className="ml-2" size={18} />
             </Link>
           </div>
         ))}
       </div>
 
       <div className="w-full sm:w-200 md:w-255 p-2 rounded shadow-[0_0_5px_rgba(0,0,0,0.4)]">
-        <div className='grid'>
+        <div className="flex flex-col gap-0.5">
           <div>
-            <h3>All plans include</h3>
-            <div>
-              
+            <div className="flex justify-between items-center font-semibold text-text-heading">
+              <h3>All plans include</h3>
+              <h3>Starter</h3>
+              <h3>Professional</h3>
+              <h3>Enterprise</h3>
             </div>
+            {plans.map((plan) => (
+              <div className="flex items-center gap-2">
+                {<plan.icon />}
+                {plan.title}
+                {}
+              </div>
+            ))}
           </div>
         </div>
       </div>
